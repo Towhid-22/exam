@@ -9,6 +9,7 @@
   --font-poppins: "var(--font-poppins)";
   --font-inter: "var(--font-inter)";
   --font-patrick-hand: "var(--font-patrick-hand)";
+  --font-nunito: "var(--font-nunito)";
 }
 
 @theme inline {

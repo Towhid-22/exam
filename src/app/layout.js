@@ -1,5 +1,13 @@
-import { Geist, Open_Sans, Poppins, Patrick_Hand } from "next/font/google";
+import {
+  Geist,
+  Open_Sans,
+  Poppins,
+  Patrick_Hand,
+  Nunito,
+} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/AllComponents/navbar/Navbar";
+import Footer from "@/components/AllComponents/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -12,6 +20,11 @@ const openSans = Open_Sans({
 });
 const poppins = Poppins({
   variable: "--font-poppins",
+  weight: "400",
+  subsets: ["latin"],
+});
+const nunito = Nunito({
+  variable: "--font-nunito",
   weight: "400",
   subsets: ["latin"],
 });
@@ -29,7 +42,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${openSans.variable} ${poppins.variable} ${patrickHand.variable} antialiased`}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${nunito.variable} ${openSans.variable} ${poppins.variable} ${patrickHand.variable} antialiased`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
