@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../../common/Container";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -14,12 +15,17 @@ const Banner = () => {
           use technology for growing business.
         </p>
         <div className="flex justify-center mt-10">
-          <button className="bg-[#1bbf00] px-7 py-[14px] cursor-pointer rounded-full text-white font-open-sans font-semibold text-[18px] mr-7">
-            Get Free Quoto
-          </button>
-          <button className="border-2 border-[#1bbf00] px-7 py-[14px] cursor-pointer rounded-full text-white font-open-sans font-semibold text-[18px]">
-            Learn More
-          </button>
+          <Link href="#">
+            <button className="hover:bg-[#1bbf00] border-2 border-[#1bbf00] px-7 py-[14px] cursor-pointer rounded-full text-white font-open-sans font-semibold text-[18px] mr-7">
+              Get Free Quoto
+            </button>
+          </Link>
+
+          <Link href="#">
+            <button className="hover:bg-[#1bbf00] border-2 border-[#1bbf00] px-7 py-[14px] cursor-pointer rounded-full text-white font-open-sans font-semibold text-[18px]">
+              Learn More
+            </button>
+          </Link>
         </div>
       </Container>
     </div>
